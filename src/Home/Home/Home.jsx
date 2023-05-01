@@ -1,6 +1,10 @@
+import { FaHandPointRight } from "react-icons/fa";
+import { useLoaderData } from "react-router-dom";
+
 const Home = () => {
+  const chefData = useLoaderData();
   return (
-    <>
+    <div className="my-20">
       <div
         className="hero h-[calc(100vh-250px)] "
         style={{ backgroundImage: `url("https://i.ibb.co/fF9kSnF/herro.jpg")` }}
@@ -21,107 +25,32 @@ const Home = () => {
       </div>
 
       <div className="container mx-auto mt-10">
-        <h3 className="text-2xl">Our Chef</h3>
+        <h3 className="mb-2 md:mb-5 text-2xl md:text-5xl font-bold">Our <span className="text-yellow-600">Chef</span></h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-              className="w-full h-64"
-                src={`https://i.ibb.co/LCmkhPJ/chef4.jpg`}
-                alt="Shoes"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+          {chefData.chefs.map((singleChef) => (
+            <div
+              key={singleChef.id}
+              className="card w-96 bg-base-100 shadow-xl"
+            >
+              <figure>
+                <img className="w-full h-64" src={singleChef.picture} alt="Shoes" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{singleChef.name}</h2>
+                <p>Experience: {singleChef.experience} years</p>
+                <div className="flex items-center justify-between">
+                    <p>Recipes: {singleChef.recipes}</p>
+                    <p className="flex items-center gap-2">Likes: {singleChef.likes}<span className="text-yellow-600 text-lg"><FaHandPointRight></FaHandPointRight></span></p>
+                </div>
+                <div className="card-actions ">
+                  <button className="btn btn-primary">View Recipes </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-              className="w-full h-64"
-                src={`https://i.ibb.co/5cYz88Y/chef3.jpg`}
-                alt="Shoes"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-              className="w-full h-64"
-                src={`https://i.ibb.co/H2cDcMq/chef2.jpg`}
-                alt="Shoes"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-              className="w-full h-64"
-                src={`https://i.ibb.co/wgFptLk/chef1.jpg`}
-                alt="Shoes"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-              className="w-full h-64"
-                src={`https://i.ibb.co/7vby6Rr/chef5.jpg`}
-                alt="Shoes"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-              className="w-full"
-                src={`https://i.ibb.co/vC9NDD6/chef6.jpg`}
-                alt="Shoes"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -25,7 +25,9 @@ const Home = () => {
       </div>
 
       <div className="container mx-auto">
-        <h2 className="mb-2 mt-5 md:my-16 md:mb-5 text-2xl md:text-5xl font-bold ">Latest <span className="text-yellow-600">Blog</span></h2>
+        <h2 className="mb-2 mt-5 md:my-16 md:mb-5 text-2xl md:text-5xl font-bold ">
+          Latest <span className="text-yellow-600">Blog</span>
+        </h2>
         <div className="grid grid-cols-4 md:grid-cols-3 gap-2">
           <div className="relative">
             <img
@@ -33,8 +35,12 @@ const Home = () => {
               src={`https://img.freepik.com/free-photo/chicken-wings-barbecue-sweetly-sour-sauce-picnic-summer-menu-tasty-food-top-view-flat-lay_2829-6471.jpg?w=1060&t=st=1682968261~exp=1682968861~hmac=5a1da2f9b9dc4b35c2842c534b5a7a5761c7fb54707412bf2a84e4b346d9a605`}
               alt=""
             />
-            <p className="bg-yellow-400 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">2 May 2023</p>
-            <p className="text-lg font-bold absolute bottom-4 text-white">Blog Title Goes To Here</p>
+            <p className="bg-yellow-600 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">
+              2 May 2023
+            </p>
+            <p className="text-lg font-bold absolute bottom-4 text-white">
+              Blog Title Goes To Here
+            </p>
           </div>
           <div className="relative">
             <img
@@ -42,8 +48,12 @@ const Home = () => {
               src={`https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg?size=626&ext=jpg&ga=GA1.2.1589682514.1675421972&semt=sph`}
               alt=""
             />
-            <p className="bg-yellow-400 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">2 May 2023</p>
-            <p className="text-lg font-bold absolute bottom-4 text-white">Blog Title Goes To Here</p>
+            <p className="bg-yellow-600 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">
+              2 May 2023
+            </p>
+            <p className="text-lg font-bold absolute bottom-4 text-white">
+              Blog Title Goes To Here
+            </p>
           </div>
           <div className="relative">
             <img
@@ -51,8 +61,12 @@ const Home = () => {
               src={`https://img.freepik.com/free-photo/pakistani-dish-arrangement-view_23-2148825114.jpg?size=626&ext=jpg&ga=GA1.2.1589682514.1675421972&semt=sph`}
               alt=""
             />
-            <p className="bg-yellow-400 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">2 May 2023</p>
-            <p className="text-lg font-bold absolute bottom-4 text-white">Blog Title Goes To Here</p>
+            <p className="bg-yellow-600 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">
+              2 May 2023
+            </p>
+            <p className="text-lg font-bold absolute bottom-4 text-white">
+              Blog Title Goes To Here
+            </p>
           </div>
           <div className="relative">
             <img
@@ -60,8 +74,12 @@ const Home = () => {
               src={`https://img.freepik.com/free-photo/delicious-pakistani-dish-high-angle_23-2148825127.jpg?size=626&ext=jpg&ga=GA1.2.1589682514.1675421972&semt=sph`}
               alt=""
             />
-            <p className="bg-yellow-400 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">2 May 2023</p>
-            <p className="text-lg font-bold absolute bottom-4 text-white">Blog Title Goes To Here</p>
+            <p className="bg-yellow-600 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">
+              2 May 2023
+            </p>
+            <p className="text-lg font-bold absolute bottom-4 text-white">
+              Blog Title Goes To Here
+            </p>
           </div>
           <div className="relative">
             <img
@@ -69,8 +87,12 @@ const Home = () => {
               src={`https://img.freepik.com/free-photo/side-view-pilaf-with-stewed-beef-meat-plate_141793-5057.jpg?size=626&ext=jpg&ga=GA1.2.1589682514.1675421972&semt=sph`}
               alt=""
             />
-            <p className="bg-yellow-400 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">2 May 2023</p>
-            <p className="text-lg font-bold absolute bottom-4 text-white">Blog Title Goes To Here</p>
+            <p className="bg-yellow-600 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">
+              2 May 2023
+            </p>
+            <p className="text-lg font-bold absolute bottom-4 text-white">
+              Blog Title Goes To Here
+            </p>
           </div>
           <div className="relative">
             <img
@@ -78,8 +100,12 @@ const Home = () => {
               src={`https://img.freepik.com/premium-photo/mutton-biryani-food-photography_162831-2.jpg?size=626&ext=jpg&ga=GA1.1.1589682514.1675421972&semt=sph`}
               alt=""
             />
-            <p className="bg-yellow-400 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">2 May 2023</p>
-            <p className="text-lg font-bold absolute bottom-4 text-white">Blog Title Goes To Here</p>
+            <p className="bg-yellow-600 w-20 text-xl font-bold text-center px-5 py-8 absolute top-2 left-4">
+              2 May 2023
+            </p>
+            <p className="text-lg font-bold absolute bottom-4 text-white">
+              Blog Title Goes To Here
+            </p>
           </div>
         </div>
       </div>
@@ -119,6 +145,34 @@ const Home = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="mt-10 bg-black relative ">
+          <img
+            className="opacity-40 w-full h-80"
+            src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJmSfv3W5Y_IzDRGnvA0mlLnCnTo2BiXMmlw&usqp=CAU`}
+            alt=""
+          />
+          <div className="absolute top-5 flex items-center justify-between">
+          <div className="w-5/12 ">
+            <h2 className="text-white text-xl font-bold px-5 uppercase">most selling food in Bangladesh</h2>
+          <p className="text-white px-5 mt-2">Bangladesh is a country of great cuisine. Its food has been shaped by its diverse history and its particular geography. Bangladeshi cuisine is influenced by Mughlai cuisine and many Persian, Turkish, Arabic, and Indian dishes are popular here. So you can guess how many different tastes you will find on any menu.</p></div>
+          <div className="carousel carousel-center w-6/12 bg-white  p-4 space-x-4  rounded-box  ">
+            {chefData.chefs.map((singleChef) => (
+              <div
+                key={singleChef.id}
+                className="carousel-item bg-black relative"
+              >
+                <img
+                  src={singleChef.food_img}
+                  className="w-56 h-56 rounded-box opacity-60"
+                />
+                <p className="text-lg text-white absolute bottom-3 font-bold">
+                  {singleChef.food_name}
+                </p>
+              </div>
+            ))}
+          </div>
+          </div>
         </div>
       </div>
     </div>

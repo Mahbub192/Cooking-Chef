@@ -2,13 +2,19 @@
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
   const [error, setError] = useState("");
   const { createUserWithGoogle, signIn, createUserWithGithub } =
     useContext(AuthContext);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location?.state?.from?.pathname || "/";
+  console.log("Login page", location?.state?.from?.pathname);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -21,6 +27,7 @@ const Login = () => {
       .then((currentUser) => {
         const user = currentUser?.user;
         console.log(user);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error.message);
@@ -36,6 +43,8 @@ const Login = () => {
         const token = credential.accessToken;
         const user = result.user;
         console.log(user);
+
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -54,6 +63,8 @@ const Login = () => {
         const token = credential.accessToken;
         const user = result.user;
         console.log(user);
+
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorCode = error.code;

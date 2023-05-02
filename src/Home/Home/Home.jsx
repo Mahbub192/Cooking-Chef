@@ -28,7 +28,7 @@ const Home = () => {
         <h2 className="mb-2 mt-5 md:my-16 md:mb-5 text-2xl md:text-4xl font-bold ">
           Latest <span className="text-yellow-600">Blog</span>
         </h2>
-        <div className="grid grid-cols-4 md:grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           <div className="relative">
             <img
               className="h-96"
@@ -111,14 +111,14 @@ const Home = () => {
       </div>
 
       <div className="container mx-auto mt-10">
-        <h3 className="mb-2 md:mb-5 text-2xl md:text-4xl font-bold">
+        <h3 className="mb-2 md:mb-5 text-3xl md:text-4xl font-bold">
           Our <span className="text-yellow-600">Chef</span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {chefData.chefs.map((singleChef) => (
             <div
               key={singleChef.id}
-              className="card w-96 bg-base-100 shadow-xl"
+              className="card md:w-96 bg-base-100 shadow-xl"
             >
               <figure>
                 <img
@@ -148,15 +148,15 @@ const Home = () => {
         </div>
         <div className="mt-10 bg-black relative ">
           <img
-            className="opacity-40 w-full h-80"
+            className="opacity-40 w-full h-[700px] md:h-80"
             src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJmSfv3W5Y_IzDRGnvA0mlLnCnTo2BiXMmlw&usqp=CAU`}
             alt=""
           />
-          <div className="absolute top-5 flex items-center justify-between">
-          <div className="w-5/12 ">
+          <div className="absolute top-5 flex flex-wrap items-center justify-between gap-10">
+          <div className="md:w-5/12 ">
             <h2 className="text-white text-xl font-bold px-5 uppercase">most selling food in Bangladesh</h2>
           <p className="text-white px-5 mt-2">Bangladesh is a country of great cuisine. Its food has been shaped by its diverse history and its particular geography. Bangladeshi cuisine is influenced by Mughlai cuisine and many Persian, Turkish, Arabic, and Indian dishes are popular here. So you can guess how many different tastes you will find on any menu.</p></div>
-          <div className="carousel carousel-center w-6/12 bg-white  p-4 space-x-4  rounded-box  ">
+          <div className="carousel carousel-center md:w-6/12 bg-white  p-4 space-x-4  rounded-box  ">
             {chefData.chefs.map((singleChef) => (
               <div
                 key={singleChef.id}

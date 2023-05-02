@@ -17,7 +17,12 @@ const Register = () => {
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
 
+    
+
     setError("");
+    if(name==null ||photo==null||email==null || password==null){
+      setError("Cannot submit empty email and password fields")
+    }
     if (confirmPassword !== password) {
       setError("Password are not same");
       return;

@@ -1,5 +1,5 @@
 import { FaHandPointRight } from "react-icons/fa";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Home = () => {
   const chefData = useLoaderData();
@@ -115,14 +115,14 @@ const Home = () => {
           Our <span className="text-yellow-600">Chef</span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {chefData.chefs.map((singleChef) => (
+          {chefData.map((singleChef) => (
             <div
               key={singleChef.id}
               className="card md:w-96 bg-base-100 shadow-xl"
             >
               <figure>
                 <img
-                  className="w-full h-64"
+                  className="w-full h-64 "
                   src={singleChef.picture}
                   alt="Shoes"
                 />
@@ -131,7 +131,7 @@ const Home = () => {
                 <h2 className="card-title">{singleChef.name}</h2>
                 <p>Experience: {singleChef.experience} years</p>
                 <div className="flex items-center justify-between">
-                  <p>Recipes: {singleChef.recipes}</p>
+                  <p>Recipes: {singleChef.recipes_count}</p>
                   <p className="flex items-center gap-2">
                     Likes: {singleChef.likes}
                     <span className="text-yellow-600 text-lg">
@@ -140,7 +140,7 @@ const Home = () => {
                   </p>
                 </div>
                 <div className="card-actions ">
-                  <button className="btn btn-primary">View Recipes </button>
+                  <Link to={`/category/${singleChef.id}`}><button className="btn btn-primary">View Recipes </button></Link>
                 </div>
               </div>
             </div>
@@ -157,7 +157,7 @@ const Home = () => {
             <h2 className="text-white text-xl font-bold px-5 uppercase">most selling food in Bangladesh</h2>
           <p className="text-white px-5 mt-2">Bangladesh is a country of great cuisine. Its food has been shaped by its diverse history and its particular geography. Bangladeshi cuisine is influenced by Mughlai cuisine and many Persian, Turkish, Arabic, and Indian dishes are popular here. So you can guess how many different tastes you will find on any menu.</p></div>
           <div className="carousel carousel-center md:w-6/12 bg-white  p-4 space-x-4  rounded-box  ">
-            {chefData.chefs.map((singleChef) => (
+            {chefData.map((singleChef) => (
               <div
                 key={singleChef.id}
                 className="carousel-item bg-black relative"

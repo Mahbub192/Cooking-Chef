@@ -75,9 +75,12 @@ const NavigationBar = () => {
         </div>
         {userProfile ? (
           <div className="flex md:gap-5 navbar-end">
-            <div className="avatar">
+            <div className="avatar relative">
               <div className="w-16 rounded-full">
-                <img src={userProfile.photoURL} />
+                <img src={userProfile?.photoURL} />
+              </div>
+              <div className="bg-black text-white bg-opacity-60 absolute inset-0 font-bold rounded-xl opacity-0 hover:opacity-100">
+                <p className="text-center py-2">{userProfile?.displayName}</p>
               </div>
             </div>
             <div className="">

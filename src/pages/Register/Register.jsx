@@ -9,14 +9,25 @@ const Register = () => {
       event.preventDefault() ;
       const form = event.target;
       const name = form.name.value;
-      const photo = form.photo.value;
+      const photo = form.profile.value;
       const email = form.email.value;
       const password = form.password.value;
+      const confirmPassword = form.confirmPassword.value;
+
+      setError('')
+      if(confirmPassword !== password){
+        setError("Password are not same")
+        return;
+      }
+      if(password < 6){
+        setError('The password is less than 6 characters')
+      }
+
     }
     return (
         <div>
         <form
-          onSubmit={'handelSignIn'}
+          onSubmit={handelSignIn}
           className="bg-gray-100 md:w-4/12 md:px-8 py-10 mx-auto my-10"
         >
           <h2 className="text-2xl font-bold px-5 mb-5">Register</h2>

@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
-import NavigationBar from "../shared/NavigationBar/NavigationBar";
 import Footer from "../shared/Footer/Footer";
+import NavigationBar from "../shared/NavigationBar/NavigationBar";
 
 const LoginLayout = () => {
-    return (
-        <div>
-            <NavigationBar></NavigationBar>
-            <Outlet></Outlet>
-            <Footer></Footer>
-        </div>
-    );
+  return (
+    <div>
+      <NavigationBar></NavigationBar>
+      <Outlet></Outlet>
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default LoginLayout;

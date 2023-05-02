@@ -25,7 +25,7 @@ const Home = () => {
       </div>
 
       <div className="container mx-auto">
-        <h2 className="mb-2 mt-5 md:my-16 md:mb-5 text-2xl md:text-5xl font-bold ">
+        <h2 className="mb-2 mt-5 md:my-16 md:mb-5 text-2xl md:text-4xl font-bold ">
           Latest <span className="text-yellow-600">Blog</span>
         </h2>
         <div className="grid grid-cols-4 md:grid-cols-3 gap-2">
@@ -111,7 +111,7 @@ const Home = () => {
       </div>
 
       <div className="container mx-auto mt-10">
-        <h3 className="mb-2 md:mb-5 text-2xl md:text-5xl font-bold">
+        <h3 className="mb-2 md:mb-5 text-2xl md:text-4xl font-bold">
           Our <span className="text-yellow-600">Chef</span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

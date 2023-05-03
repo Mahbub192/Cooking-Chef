@@ -1,6 +1,6 @@
 import { FaHandPointRight } from "react-icons/fa";
-import { Link, useLoaderData } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Home = () => {
   const chefData = useLoaderData();

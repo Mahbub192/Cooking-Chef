@@ -19,12 +19,12 @@ const ChefInfo = () => {
       </div>
       <div className="mt-10 bg-white relative">
         <img
-        className="object-cover w-full h-96 opacity-10"
+        className="object-cover w-full h-screen md:h-96 opacity-10"
           src="https://thumbs.dreamstime.com/b/brick-wall-background-angled-text-room-graphics-142616487.jpg"
           alt=""
         />
-        <div className="absolute inset-0 flex items-center justify-between container mx-auto">
-            <div className="w-1/2">
+        <div className="absolute inset-0 flex flex-wrap gap-5 items-center justify-between container mx-auto">
+            <div className="md:w-1/2">
                 <h2 className="text-2xl font-bold text-yellow-900 mb-2">{singleChefInfo.name}</h2>
                 <p className="text-gray-600 leading-relaxed text-justify text-lg">{singleChefInfo.description}</p>
                 <p className="my-1 text-gray-600"><span className="font-bold">Experience</span>: {singleChefInfo.experience} years</p>
@@ -36,7 +36,7 @@ const ChefInfo = () => {
                     </span>
                   </p>
             </div>
-            <div className="w-2/5  overflow-hidden">
+            <div className="w-full md:w-2/5  overflow-hidden">
                 <img className="object-cover w-full" src={singleChefInfo.picture} alt="" />
             </div>
         </div>

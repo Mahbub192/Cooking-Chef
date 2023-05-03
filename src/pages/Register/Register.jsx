@@ -1,12 +1,16 @@
-import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
   const [error, setError] = useState("");
 
   const { auth, createUser } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const from = "/";
 
   const handelSignIn = (event) => {
     event.preventDefault();
@@ -44,6 +48,7 @@ const Register = () => {
             console.log(error.message);
             setError(error.message);
           });
+        navigate(from);
         form.reset();
       })
       .catch((error) => {

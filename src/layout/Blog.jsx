@@ -30,7 +30,7 @@ const Blog = () => {
             </button>
           )}
         </ReactToPdf>
-        <div ref={ref} className="px-2">
+        <div ref={ref} className="px-2 mt-5">
           <h2 className="text-xl">
             <span className="font-bold">Question-1</span> Differences between
             uncontrolled and controlled components ?

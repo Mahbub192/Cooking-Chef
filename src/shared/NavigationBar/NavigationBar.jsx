@@ -3,7 +3,18 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const NavigationBar = () => {
-  const { userProfile, logOut } = useContext(AuthContext);
+  const { userProfile, logOut,loader } = useContext(AuthContext);
+
+  if (loader) {
+    return (
+      <div className="h-[calc(100vh-50px)] container mx-auto text-center mt-72">
+        <progress className="progress w-96"></progress>
+        <p className=" text-4xl">
+          Loading.........
+        </p>
+      </div>
+    );
+  }
 
   const handleLogout = () => {
     logOut()

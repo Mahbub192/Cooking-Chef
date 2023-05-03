@@ -8,6 +8,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import Example from "../pages/Example";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
     path:'blog',
     element:<Blog></Blog>,
     errorElement:<ErrorPage />,
-  }
+  },
+  {
+    path:'example',
+    element:<Example></Example>,
+    errorElement:<ErrorPage />,
+  },
 ]);
 export default router;

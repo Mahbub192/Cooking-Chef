@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 /* eslint-disable react/prop-types */
 const RecipesCard = ({ recipe }) => {
     const [buttonDisabled, setButtonDisabled] = useState(false);
 
     const handleButtonClick = () => {
+      toast("Ste it favorite list !!");
       setButtonDisabled(true);
     }
   const {

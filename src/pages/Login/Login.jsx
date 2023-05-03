@@ -43,7 +43,6 @@ const Login = () => {
         const token = credential.accessToken;
         const user = result.user;
         console.log(user);
-        form.reset();
         navigate(from, { replace: true });
       })
       .catch((error) => {

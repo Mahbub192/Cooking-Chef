@@ -1,5 +1,6 @@
 import { FaHandPointRight } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import LazyLoad from "react-lazy-load";
 
 const Home = () => {
   const chefData = useLoaderData();
@@ -121,11 +122,13 @@ const Home = () => {
               className="card md:w-96 bg-base-100 shadow-xl"
             >
               <figure>
-                <img
-                  className="w-full h-64 "
-                  src={singleChef.picture}
-                  alt="Shoes"
-                />
+                <LazyLoad  threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+                  <img
+                    className="w-full h-64 "
+                    src={singleChef.picture}
+                    alt="Shoes"
+                  />
+                </LazyLoad>
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{singleChef.name}</h2>
@@ -140,7 +143,9 @@ const Home = () => {
                   </p>
                 </div>
                 <div className="card-actions ">
-                  <Link to={`/category/${singleChef.id}`}><button className="btn btn-primary">View Recipes </button></Link>
+                  <Link to={`/category/${singleChef.id}`}>
+                    <button className="btn btn-primary">View Recipes </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -153,25 +158,35 @@ const Home = () => {
             alt=""
           />
           <div className="absolute top-5 flex flex-wrap items-center justify-between gap-10">
-          <div className="md:w-5/12 ">
-            <h2 className="text-white text-xl font-bold px-5 uppercase">most selling food in Bangladesh</h2>
-          <p className="text-white px-5 mt-2">Bangladesh is a country of great cuisine. Its food has been shaped by its diverse history and its particular geography. Bangladeshi cuisine is influenced by Mughlai cuisine and many Persian, Turkish, Arabic, and Indian dishes are popular here. So you can guess how many different tastes you will find on any menu.</p></div>
-          <div className="carousel carousel-center md:w-6/12 bg-white  p-4 space-x-4  rounded-box  ">
-            {chefData.map((singleChef) => (
-              <div
-                key={singleChef.id}
-                className="carousel-item bg-black relative"
-              >
-                <img
-                  src={singleChef.food_img}
-                  className="w-56 h-56 rounded-box opacity-60"
-                />
-                <p className="text-lg text-white absolute bottom-3 font-bold">
-                  {singleChef.food_name}
-                </p>
-              </div>
-            ))}
-          </div>
+            <div className="md:w-5/12 ">
+              <h2 className="text-white text-xl font-bold px-5 uppercase">
+                most selling food in Bangladesh
+              </h2>
+              <p className="text-white px-5 mt-2">
+                Bangladesh is a country of great cuisine. Its food has been
+                shaped by its diverse history and its particular geography.
+                Bangladeshi cuisine is influenced by Mughlai cuisine and many
+                Persian, Turkish, Arabic, and Indian dishes are popular here. So
+                you can guess how many different tastes you will find on any
+                menu.
+              </p>
+            </div>
+            <div className="carousel carousel-center md:w-6/12 bg-white  p-4 space-x-4  rounded-box  ">
+              {chefData.map((singleChef) => (
+                <div
+                  key={singleChef.id}
+                  className="carousel-item bg-black relative"
+                >
+                  <img
+                    src={singleChef.food_img}
+                    className="w-56 h-56 rounded-box opacity-60"
+                  />
+                  <p className="text-lg text-white absolute bottom-3 font-bold">
+                    {singleChef.food_name}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -106,6 +106,16 @@ const Register = () => {
             required
           />
         </div>
+        <div className="px-5 mt-5">
+          <input
+            className=""
+            type="checkbox"
+            id="vehicle1"
+            name="vehicle1"
+            value="Bike"
+          />
+          <label htmlFor="vehicle1"> Accept all tram and condition</label>
+        </div>
 
         <div className="px-5">
           <button className="px-4 py-3 bg-blue-400 text-white font-bold uppercase shadow-lg w-full mt-5">

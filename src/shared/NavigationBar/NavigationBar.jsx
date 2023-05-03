@@ -1,6 +1,5 @@
 import { useContext } from "react";
-import { FaConciergeBell } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const NavigationBar = () => {
@@ -39,52 +38,53 @@ const NavigationBar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to={"/"} className="text-lg font-bold">
+                <NavLink to={"/"} className="text-lg font-bold">
                   Home
-                </Link>
+                </NavLink>
               </li>
 
               <li>
-                <Link to={`/blog`} className="text-lg font-bold">
+                <NavLink to={`/blog`} className="text-lg font-bold">
                   Blog
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
           <div className="flex items-center">
-            <p className="md:text-2xl md:pr-2 text-gray-600">
+            {/* <p className="md:text-2xl md:pr-2 text-gray-600">
               <FaConciergeBell></FaConciergeBell>
-            </p>
-            <a className="btn btn-ghost normal-case md:text-xl">Cooking Chef</a>
+            </p> */}
+            <img className="w-14 " src="https://i.ibb.co/YfgDXS3/OE612O0.jpg" alt="" />
+            <a className="btn btn-ghost normal-case md:text-xl -ml-5">Cooking Chef</a>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to={"/"} className="text-lg font-bold">
+              <NavLink to={"/"} className="text-lg font-bold">
                 Home
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link to={`/blog`} className="text-lg font-bold">
+              <NavLink to={`/blog`} className="text-lg font-bold">
                 Blog
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
         {userProfile ? (
-          <div className="flex md:gap-5 navbar-end">
+          <div className="flex gap-2 md:gap-5 navbar-end">
             <div className="avatar relative">
-              <div className="w-16 rounded-full">
+              <div className="w-14 rounded-full">
                 <img src={userProfile?.photoURL} />
               </div>
-              <div className="bg-black text-white bg-opacity-60 absolute inset-0 font-bold rounded-xl opacity-0 hover:opacity-100">
+              <div className="bg-black text-white bg-opacity-60 absolute top-0 md:font-bold opacity-0 hover:opacity-100">
                 <p className="text-center py-2">{userProfile?.displayName}</p>
               </div>
             </div>
             <div className="">
-              <button onClick={handleLogout} className="btn">
+              <button onClick={handleLogout} className="btn w-16 md:w-full">
                 Logout
               </button>
             </div>

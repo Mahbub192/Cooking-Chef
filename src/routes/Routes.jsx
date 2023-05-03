@@ -1,12 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../Home/Home/Home";
+import Blog from "../layout/Blog";
+import Chefs from "../layout/Chefs";
 import LoginLayout from "../layout/LoginLayout";
+import ChefInfo from "../pages/ChefInfo/ChefInfo";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import Chefs from "../layout/Chefs";
-import ChefInfo from "../pages/ChefInfo/ChefInfo";
 import PrivateRoute from "./PrivateRoute";
-import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         loader: ({params})=> fetch(`https://cooking-chef-server-mahbub192.vercel.app/chef/${params.id}`)
       }
     ]
+  },
+  {
+    path:'blog',
+    element:<Blog></Blog>,
+    errorElement:<ErrorPage />,
   }
 ]);
 export default router;

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link, useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {

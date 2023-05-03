@@ -43,7 +43,7 @@ const Login = () => {
         const token = credential.accessToken;
         const user = result.user;
         console.log(user);
-
+        form.reset();
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -102,16 +102,6 @@ const Login = () => {
             placeholder="password"
             required
           />
-        </div>
-        <div className="px-5 mt-5">
-          <input
-            className=""
-            type="checkbox"
-            id="vehicle1"
-            name="vehicle1"
-            value="Bike"
-          />
-          <label htmlFor="vehicle1"> Remember Me</label>
         </div>
         <div className="px-5">
           <button className="px-4 py-3 bg-blue-400 text-white font-bold uppercase shadow-lg w-full mt-5">

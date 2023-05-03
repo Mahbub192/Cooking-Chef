@@ -17,11 +17,9 @@ const Register = () => {
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
 
-    
-
     setError("");
-    if(name==null ||photo==null||email==null || password==null){
-      setError("Cannot submit empty email and password fields")
+    if (name == null || photo == null || email == null || password == null) {
+      setError("Cannot submit empty email and password fields");
     }
     if (confirmPassword !== password) {
       setError("Password are not same");
@@ -46,6 +44,7 @@ const Register = () => {
             console.log(error.message);
             setError(error.message);
           });
+        form.reset();
       })
       .catch((error) => {
         console.log(error.message);
@@ -107,16 +106,7 @@ const Register = () => {
             required
           />
         </div>
-        <div className="px-5 mt-5">
-          <input
-            className=""
-            type="checkbox"
-            id="vehicle1"
-            name="vehicle1"
-            value="Bike"
-          />
-          <label htmlFor="vehicle1"> Remember Me</label>
-        </div>
+
         <div className="px-5">
           <button className="px-4 py-3 bg-blue-400 text-white font-bold uppercase shadow-lg w-full mt-5">
             Register

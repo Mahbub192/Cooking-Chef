@@ -33,7 +33,7 @@ const RecipesCard = ({ recipe }) => {
           }
           <p>Cooking Method</p>
           {
-            cooking_method?.map((item, i) =><p key={i}>{item}</p>)
+            cooking_method.map((item, i) =><p key={i}>{item}</p>)
           }
           <p className="flex text-lg items-center gap-1">Rating<span className="text-yellow-600"><FaStar></FaStar></span>{rating}</p>
           <div className="card-actions justify-end">

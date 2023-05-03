@@ -32,6 +32,7 @@ const router = createBrowserRouter([
   {
     path:'category',
     element:<Chefs></Chefs>,
+    errorElement: <ErrorPage />,
     children:[
       {
         path:":id",

@@ -118,32 +118,32 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {chefData.map((singleChef) => (
             <div
-              key={singleChef.id}
+              key={singleChef?.id}
               className="card md:w-96 bg-base-100 shadow-xl"
             >
               <figure>
-                <LazyLoad  threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+                <LazyLoad  threshold={0.95}>
                   <img
                     className="w-full h-64 "
-                    src={singleChef.picture}
+                    src={singleChef?.picture}
                     alt="Shoes"
                   />
                 </LazyLoad>
               </figure>
               <div className="card-body">
-                <h2 className="card-title">{singleChef.name}</h2>
-                <p>Experience: {singleChef.experience} years</p>
+                <h2 className="card-title">{singleChef?.name}</h2>
+                <p>Experience: {singleChef?.experience} years</p>
                 <div className="flex items-center justify-between">
-                  <p>Recipes: {singleChef.recipes_count}</p>
+                  <p>Recipes: {singleChef?.recipes_count}</p>
                   <p className="flex items-center gap-2">
-                    Likes: {singleChef.likes}
+                    Likes: {singleChef?.likes}
                     <span className="text-yellow-600 text-lg">
                       <FaHandPointRight></FaHandPointRight>
                     </span>
                   </p>
                 </div>
                 <div className="card-actions ">
-                  <Link to={`/category/${singleChef.id}`}>
+                  <Link to={`/category/${singleChef?.id}`}>
                     <button className="btn btn-primary">View Recipes </button>
                   </Link>
                 </div>

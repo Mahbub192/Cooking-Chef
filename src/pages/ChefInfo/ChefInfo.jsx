@@ -4,7 +4,6 @@ import RecipesCard from "../RecipesCard/RecipesCard";
 
 const ChefInfo = () => {
   const singleChefInfo = useLoaderData();
-  console.log(singleChefInfo);
   return (
     <div>
       <div className="bg-black relative">

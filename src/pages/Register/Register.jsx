@@ -37,7 +37,6 @@ const Register = () => {
     createUser(email, password)
       .then((signUser) => {
         const user = signUser.user;
-        console.log(name, email, password, photo);
         console.log(user);
         updateProfile(auth.currentUser, {
           displayName: name,
@@ -45,14 +44,12 @@ const Register = () => {
         })
           .then(() => {})
           .catch((error) => {
-            console.log(error.message);
             setError(error.message);
           });
         navigate(from);
         form.reset();
       })
       .catch((error) => {
-        console.log(error.message);
         setError(error.message);
       });
   };

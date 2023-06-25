@@ -14,7 +14,6 @@ const Login = () => {
   const location = useLocation();
 
   const from = location?.state?.from?.pathname || "/";
-  console.log("Login page", location?.state?.from?.pathname);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -26,11 +25,9 @@ const Login = () => {
     signIn(email, password)
       .then((currentUser) => {
         const user = currentUser?.user;
-        console.log(user);
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        console.log(error.message);
         setError(error.message);
       });
   };
@@ -42,7 +39,6 @@ const Login = () => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
         const user = result.user;
-        console.log(user);
         
         navigate(from, { replace: true });
       })
@@ -51,7 +47,6 @@ const Login = () => {
         const errorMessage = error?.message;
         const email = error?.customData?.email;
         const credential = GoogleAuthProvider?.credentialFromError(error);
-        console.log(errorCode, errorMessage, email, credential);
       });
   };
 
@@ -62,7 +57,6 @@ const Login = () => {
         const credential = GithubAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
         const user = result.user;
-        console.log(user);
 
         navigate(from, { replace: true });
       })
@@ -71,7 +65,6 @@ const Login = () => {
         const errorMessage = error?.message;
         const email = error?.customData?.email;
         const credential = GithubAuthProvider?.credentialFromError(error);
-        console.log(errorCode, errorMessage, email, credential);
       });
   };
 

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import chef from '../../assets/chef.png'
 
 const NavigationBar = () => {
   const { userProfile, logOut,loader } = useContext(AuthContext);
@@ -65,8 +66,8 @@ const NavigationBar = () => {
             {/* <p className="md:text-2xl md:pr-2 text-gray-600">
               <FaConciergeBell></FaConciergeBell>
             </p> */}
-            <img className="w-14 " src="https://i.ibb.co/YfgDXS3/OE612O0.jpg" alt="" />
-            <a className="btn btn-ghost normal-case md:text-xl -ml-5">Cooking Chef</a>
+            <img className="w-14 " src={chef} alt="" />
+            <a className="btn btn-ghost normal-case md:text-xl -ml-3">Cooking Chef</a>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
